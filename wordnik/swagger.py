@@ -144,7 +144,7 @@ class ApiClient:
             # Server will always return a time stamp in UTC, but with
             # trailing +0000 indicating no offset from UTC. So don't process
             # last 5 characters.
-            return datetime.datetime.strptime(obj[:-5],
+            return datetime.datetime.strptime(obj[:-3],
                                               "%Y-%m-%dT%H:%M:%S.%f")
 
         instance = objClass()
